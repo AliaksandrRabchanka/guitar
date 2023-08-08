@@ -1,0 +1,55 @@
+@import 'main';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  margin: 5px;
+  border: 1px dashed $color_gray_medium-3;
+  width: 150px;
+
+  &-image {
+    height: 100px;
+    margin-bottom: 5px;
+
+    img {
+      height: 100%;
+      max-width: 100%;
+    }
+  }
+  &-description {
+    margin-bottom: 5px;
+    height: 70px;
+    overflow: auto;
+  }
+  &-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  &-price {
+    span {
+      background: $color_yellow;
+    }
+  }
+  &-basket {
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+    background: $color_green_medium;
+   &:hover {
+     background: $color_green_dark;
+   }
+  }
+}
+
+.selected {
+  background: $color_red;
+  &:hover {
+    background: $color_red_dark;
+  }
+}

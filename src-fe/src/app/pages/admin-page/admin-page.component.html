@@ -1,0 +1,41 @@
+<ul>
+  <li *ngFor="let user of users; let i = index">
+    <span>{{i + 1}}.&nbsp;</span>
+    <span>{{'components.adminPage.user' | translate}}</span>
+    <span class="user-data">{{user.login}}</span>
+    <span>&nbsp;</span>
+    <span>{{'components.adminPage.email' | translate}}</span>
+    <span class="user-data">{{user.email}}</span>
+    <div class="admin-wrapper">
+      <ul class="purchase-list">
+        <li *ngFor="let order of userOrders(user._id); let i = index;">
+          <span>{{i + 1}}.&nbsp;</span>
+          <span>{{'components.adminPage.order' | translate}} {{order._id}} </span>
+          <span class="order-list__order-status">{{'components.adminPage.' + order.status | translate }}</span>
+          <button
+            class="btn"
+            (click)="changeOrder(order._id, 'delivered')"
+            [hidden]="(order.status === 'canceled' || order.status === 'received'|| order.status === 'delivered')"
+          >{{'components.adminPage.deliveredBtn' | translate}}</button>
+          <button
+            class="btn"
+            (click)="changeOrder(order._id, 'received')"
+            [hidden]="(order.status === 'canceled' || order.status === 'received')"
+          >{{'components.adminPage.receivedBtn' | translate}}</button>
+          <button
+            class="btn"
+            (click)="changeOrder(order._id, 'canceled')"
+            [hidden]="(order.status === 'canceled' || order.status === 'received')"
+          >{{'components.adminPage.cancelBtn' | translate}}</button>
+          <ul>
+            <li *ngFor="let item of order.products; let i = index;">
+              <span>{{i + 1}}.&nbsp;</span>
+              <span>{{'components.adminPage.product' | translate}}{{item.title}}</span>
+              <span>{{'components.adminPage.price' | translate}}{{item.price | currency}}</span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </li>
+</ul>

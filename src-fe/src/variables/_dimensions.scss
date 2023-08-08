@@ -1,0 +1,68 @@
+$global-header-container-height: 60px;
+$global-table-menu-container-height: 60px;
+$user-profile-diameter: 48px;
+$global-footer_height: 50px;
+$permissions-page-offset: 10vh;
+$search-wrapper-height: 38px;
+
+/* global menu */
+$element-side-margins: 5px;
+$data-loader-padding: 13px;
+$data-loader-thickness: 1px;
+
+/* tables */
+$tables-max-width: 1500px;
+$notification-under-table: 27px;
+
+/* page inner container*/
+$page-container_width: 95%;
+$page-container_left-padding: 30px;
+$page-container_padding: 30px;
+
+/* aside menu*/
+$main-aside-menu_width: 25em;
+$main-aside-menu__header_padding: 15px;
+$main-aside-menu__header_font-size: 1.2em;
+
+/* main content*/
+$main-content_padding: 15px;
+
+/* map page*/
+$mp__controls-button_padding: 8px;
+$mp__controls-button_width: 100px;
+$mp__tab-space_height: 40px;
+
+/* visitors page*/
+$social-media-icon-size: 20px;
+$person-avatar-size: 19px;
+
+/* error page */
+$error-page_padding: 3rem 1rem;
+$error-page__error-code_font-size: 8rem;
+$error-page__solution-text_font-size: 1.1rem;
+$error-page__solution-text_padding: 24px;
+$error-page__error-message-container-height: 110px;
+$error-page__home-link-container-height: 70px;
+
+
+/* report file modal */
+$report-file-modal__content-wraper_min-width: 350px;
+$report-file-modal__content-wraper_width: 450px;
+$report-file-modal__content-wrapper_min-height: 150px;
+$report-file-modal__loader_size: 2rem;
+$report-file-modal__loader_track-size: 0.1rem;
+
+/* report share link modal */
+$report-share-link-modal__content-wrapper_width: 350px;
+$report-share-link-modal__content-wrapper_height: 120px;
+
+/* loader */
+$loader_radius_small: 0.2em;
+$loader_radius_medium: 0.5em;
+$loader_radius_big: 1em;
+$loader_offset-small: 2em;
+$loader_offset-big: 3em;
+
+/* flatpickr content */
+$flatpickr_main-height: 36px;
+$flatpickr_main-width: 36px;

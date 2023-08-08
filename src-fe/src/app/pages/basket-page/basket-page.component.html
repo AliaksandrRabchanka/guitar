@@ -1,0 +1,14 @@
+<div>
+  <span>{{'components.basketPage.title' | translate}}</span>
+  <span> {{basket?.length}}</span>
+</div>
+<button *ngIf="basket?.length > 0" class="btn" (click)="toOrder()">
+  <span>{{'components.basketPage.orderBtn' | translate}}</span>
+</button>
+<div class="basket-wrapper">
+  <guitar-basket [user]="user" [basket]="basket"></guitar-basket>
+</div>
+
+<guitar-modal *ngIf="showModal" [title]="('components.basketPage.modalTitle' | translate)">
+  <guitar-order-create (showModal)="toOrder()" [user]="user"></guitar-order-create>
+</guitar-modal>

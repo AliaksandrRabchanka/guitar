@@ -1,0 +1,13 @@
+<div *ngIf="!user">
+  <span>{{'components.homePage.beforeAuthorization' | translate}}</span>
+  <a [routerLink]='loginUrl'>{{'components.homePage.authorization' | translate}}</a>
+</div>
+<div *ngIf="user">
+  <p>
+    <span>{{'components.homePage.dear' | translate}}</span>
+    <span>{{user}},</span>
+  </p>
+  <p>
+    <span>{{'components.homePage.greetings' | translate}}</span>
+  </p>
+</div>

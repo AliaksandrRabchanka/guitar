@@ -1,0 +1,26 @@
+<div class="wrapper">
+  <div *ngIf="user">
+    <button class="btn" (click)="sort()">
+      <span>{{'components.showcasePage.sortBtn' | translate}}</span>
+      <!--  <span>sort {{increase ? '<' : '>'}}</span>-->
+    </button>
+    <button *ngIf="user.isAdmin" class="btn" (click)="showModalWindow({})">
+      <span>{{'components.showcasePage.createBtn' | translate}}</span>
+    </button>
+  </div>
+  <div>
+    <input type="text" placeholder="{{'components.showcasePage.filterString' | translate}}" [(ngModel)]="filterString">
+  </div>
+  <main class="main-wrapper">
+    <div *ngFor="let product of products | productsFilter:filterString">
+      <guitar-card
+        [product]="product"
+        (onDeleteProduct)="deleteProduct($event)"
+        (onShowModalWindow)="showModalWindow($event)"></guitar-card>
+    </div>
+  </main>
+  <guitar-card-create
+    *ngIf="showWindow"
+    [product]="product"
+    (closeModal)="closeModal($event)"></guitar-card-create>
+</div>

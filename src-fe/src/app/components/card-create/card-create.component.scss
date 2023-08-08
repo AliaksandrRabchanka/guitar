@@ -1,0 +1,68 @@
+@import 'main';
+
+.card-create-wrapper {
+  background: #ffffffde;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-create {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background: #ededed;
+  border: 1px dashed $color_gray_medium-3;
+
+  .title {
+    padding-bottom: 14px;
+  }
+
+  .form-group {
+    min-height: 35px;
+  }
+
+  &-form_field {
+    display: flex;
+
+    label {
+      margin-right: 5px;
+    }
+
+    &.choose-image {
+      input {
+        display: none;
+      }
+    }
+
+    &.image-preview {
+      height: 45px;
+    }
+
+    textarea {
+      min-height: 30px;
+      max-height: 80px;
+      min-width: 150px;
+      max-width: 200px;
+    }
+  }
+}
+
+.alert-danger {
+  font-size: 12px;
+  font-style: italic;
+  color: $color_red;
+}
+
+input.ng-touched.ng-invalid {
+  border:solid $color_red 2px;
+}
+input.ng-touched.ng-valid {
+  border:solid $color_green_medium 2px;
+}

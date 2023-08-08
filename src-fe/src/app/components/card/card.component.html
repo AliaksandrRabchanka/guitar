@@ -1,0 +1,27 @@
+<div class="card">
+  <div *ngIf="user && user.isAdmin">
+    <button class="btn" (click)="editProduct(product)">
+      <span>{{'components.card.editBtn' | translate}}</span>
+    </button>
+    <button class="btn" (click)="deleteProduct(product._id)">
+      <span>{{'components.card.deleteBtn' | translate}}</span>
+    </button>
+  </div>
+  <div class="card-title">
+    <h2>{{product.title}}</h2>
+  </div>
+  <div class="card-image">
+    <img [src]="image" [alt]="'product image'">
+  </div>
+  <div class="card-description">
+    <p>{{product.description}}</p>
+  </div>
+  <div *ngIf="user" class="card-footer">
+    <p class="card-price">
+      <span>{{product.price | currency}}</span>
+    </p>
+    <button class="btn card-basket" [ngClass]="{'selected': changeButtonStyle(product._id)}" (click)="selectProduct(product._id)">
+      <span>{{'components.card.buyBtn' | translate}}</span>
+    </button>
+  </div>
+</div>

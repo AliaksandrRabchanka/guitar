@@ -1,0 +1,25 @@
+<div>
+  <span>{{'components.orderPage.title' | translate}}</span>
+  <span> {{selectedProducts?.length}}</span>
+</div>
+<button class="btn" (click)="goBack()">
+  <span>{{'components.orderPage.backBtn' | translate}}</span>
+</button>
+<div class="order-wrapper">
+  <ul class="order-list">
+    <li *ngFor="let item of selectedProducts; let i = index;">
+      <span>{{i + 1}}.&nbsp;</span>
+      <span>{{item.title}}</span>
+      <span>{{item.price | currency}}</span>
+      <button class="btn" (click)="deleteProductFromOrder(item._id)">{{'components.basket.deleteBtn' | translate}}</button>
+    </li>
+  </ul>
+</div>
+<div class="order-footer">
+  <button class="btn" [disabled]="selectedProducts?.length < 1" (click)="reset()">
+    <span>{{'components.orderPage.resetBtn' | translate}}</span>
+  </button>
+  <button class="btn" [disabled]="selectedProducts?.length < 1" (click)="submit()">
+    <span>{{'components.orderPage.submitBtn' | translate}}</span>
+  </button>
+</div>

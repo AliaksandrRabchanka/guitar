@@ -1,0 +1,112 @@
+{
+  "components": {
+    "login": {
+      "title": "Login form",
+      "login": "Login",
+      "loginError": "login must be more than 2 characters",
+      "password": "Password",
+      "passwordError": "password must be more than 5 characters",
+      "loginBtn": "Login"
+    },
+    "register": {
+      "title": "Register form",
+      "login": "Login",
+      "loginError": "login must be more than 2 characters",
+      "email": "Email",
+      "emailError": "email is not valid",
+      "password": "Password",
+      "passwordError": "password must be more than 5 characters",
+      "admin": "Administrator",
+      "registerBtn": "Register"
+    },
+    "header": {
+      "logo": "guitar shop",
+      "navigation": {
+        "showcase": "showcase",
+        "basket": "basket",
+        "order": "order",
+        "admin": "admin",
+        "chat": "chat"
+      },
+      "login": "Login",
+      "logout": "Logout"
+    },
+    "footer": {
+      "buildVersion": "build: "
+    },
+    "card": {
+      "editBtn": "edit",
+      "deleteBtn": "delete",
+      "buyBtn":"Buy"
+    },
+    "cardCreate": {
+      "editTitle": "edit product",
+      "createTitle": "create product",
+      "productTitle": "title ",
+      "productTitleError": "title must be more than 3 characters",
+      "productImage": "image ",
+      "productImageBtn": "chose file",
+      "deleteProductImageBtn": "delete image",
+      "productDescription": "description ",
+      "productPrice": "price ",
+      "productPriceError": "price must be a number or a number with a dot",
+      "cancelBtn": "cancel",
+      "saveBtn":"save"
+    },
+    "basket": {
+      "deleteBtn": "delete"
+    },
+    "homePage": {
+      "beforeAuthorization": "On this website you can choose your guitar after ",
+      "authorization": "authorization",
+      "dear": "Dear ",
+      "greetings": "We are glad to see you on our website. Please go to the showcase page and see our guitars."
+    },
+    "loginPage": {
+      "title": "Here you can ",
+      "loginRegisterBtn": "Login/Register",
+      "userLogin": "You are logged in as "
+    },
+    "showcasePage": {
+      "sortBtn": "sort",
+      "createBtn": "create",
+      "filterString": "filter by name"
+    },
+    "basketPage": {
+      "title": "Your selected items in the basket: ",
+      "orderBtn": "order",
+      "modalTitle": "create order"
+    },
+    "orderPage": {
+      "title": "Your order",
+      "order": "Order №",
+      "created": "created",
+      "canceled": "canceled",
+      "delivered": "delivered",
+      "received": "received",
+      "cancelBtn": "cancel",
+      "backBtn": "back",
+      "resetBtn": "reset",
+      "submitBtn": "submit"
+    },
+    "adminPage": {
+      "user": "user: ",
+      "email": "email: ",
+      "order": "Order №",
+      "created": "created",
+      "canceled": "canceled",
+      "delivered": "delivered",
+      "received": "received",
+      "deliveredBtn": "delivered",
+      "receivedBtn": "received",
+      "cancelBtn": "cancel",
+      "product": "product: ",
+      "price": "price: "
+    },
+    "chatPage": {
+      "title": "Chat",
+      "sendMessage": "Send message",
+      "counter": " messages in the chat"
+    }
+  }
+}

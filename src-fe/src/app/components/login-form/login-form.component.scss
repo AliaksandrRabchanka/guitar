@@ -1,0 +1,41 @@
+@import 'main';
+
+.login-form {
+  padding: 10px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  border: 2px dashed $color_gray_dark-2;
+
+  form {
+    width: 100%;
+  }
+
+  &_field {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    label {
+      //margin-right: 30px;
+    }
+  }
+
+  .btn {
+    margin-top: 5px;
+  }
+}
+
+.alert-danger {
+  font-size: 12px;
+  font-style: italic;
+  color: $color_red;
+}
+
+input.ng-touched.ng-invalid {
+  border:solid $color_red 2px;
+}
+input.ng-touched.ng-valid {
+  border:solid $color_green_medium 2px;
+}

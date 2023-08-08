@@ -1,0 +1,17 @@
+<div *ngIf="!user">
+  <div>
+    <span>{{'components.loginPage.title' | translate}}</span>
+    <button class="btn login-register" (click)="onChanged()">{{'components.loginPage.loginRegisterBtn' | translate}}</button>
+  </div>
+  <div class="content">
+    <div *ngIf="checked">
+      <guitar-login-form></guitar-login-form>
+    </div>
+    <div *ngIf="!checked">
+      <guitar-register-form></guitar-register-form>
+    </div>
+  </div>
+</div>
+<div *ngIf="user">
+  <span>{{'components.loginPage.userLogin' + user.login | translate}}</span>
+</div>

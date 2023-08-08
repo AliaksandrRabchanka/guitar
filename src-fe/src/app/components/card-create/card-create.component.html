@@ -1,0 +1,54 @@
+<div class="card-create-wrapper">
+  <div class="card-create">
+    <span class="title">{{ (product._id ? 'components.cardCreate.editTitle' : 'components.cardCreate.createTitle') | translate}}</span>
+    <form [formGroup]="cardCreateForm" novalidate (ngSubmit)="onSave()">
+      <div class="form-group">
+        <div class=" card-create-form_field">
+          <label for="title">{{'components.cardCreate.productTitle' | translate}}</label>
+          <input appFocus id="title" class="form-control" name="title" formControlName="title" type="text" [ngModel]="product.title">
+        </div>
+        <div class="alert alert-danger"
+             *ngIf="cardCreateForm.controls['title'].invalid && cardCreateForm.controls['title'].touched">
+          <span>{{'components.cardCreate.productTitleError' | translate}}</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class=" card-create-form_field choose-image">
+          <label for="image">{{'components.cardCreate.productImage' | translate}}</label>
+          <input
+            class="form-control"
+            id="image"
+            name="image"
+            formControlName="image"
+            type="file"
+            #fileInput
+            (change)="onFileSelect($event)">
+          <button class="btn" type="button" (click)="fileInput.click()">{{'components.cardCreate.productImageBtn' | translate}}</button>
+        </div>
+        <div *ngIf="imageData" class=" card-create-form_field image-preview">
+          <img [src]="imageData" [alt]="'product image'">
+          <button class="btn" type="button" (click)="deleteImage()">{{'components.cardCreate.deleteProductImageBtn' | translate}}</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class=" card-create-form_field">
+          <label for="description">{{'components.cardCreate.productDescription' | translate}}</label>
+          <textarea id="description" class="form-control" name="description" formControlName="description" type="text"
+                    [ngModel]="product.description"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class=" card-create-form_field">
+          <label for="price">{{'components.cardCreate.productPrice' | translate}}</label>
+          <input id="price" class="form-control" name="price" formControlName="price" type="text" [ngModel]="product.price">
+        </div>
+        <div class="alert alert-danger"
+             *ngIf="cardCreateForm.controls['price'].invalid && cardCreateForm.controls['price'].touched">
+          <span>{{'components.cardCreate.productPriceError' | translate}}</span>
+        </div>
+      </div>
+      <button class="btn" (click)="onCancel()">{{'components.cardCreate.cancelBtn' | translate}}</button>
+      <button class="btn" [disabled]="cardCreateForm.invalid">{{'components.cardCreate.saveBtn' | translate}}</button>
+    </form>
+  </div>
+</div>

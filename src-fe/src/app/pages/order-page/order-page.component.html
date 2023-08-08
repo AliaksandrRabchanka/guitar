@@ -1,0 +1,29 @@
+<div>
+  <span>{{'components.orderPage.title' | translate}}</span>
+  <span> {{orders?.length}}</span>
+</div>
+<div class="order-wrapper" *ngIf="orders">
+  <ul class="order-list">
+    <li class="order-list__order"
+      *ngFor="let order of orders; let i = index;"
+      [ngClass]="{done : (order.status === 'canceled' || order.status === 'received')}"
+    >
+      <span>{{i + 1}}.&nbsp;</span>
+      <span>{{'components.orderPage.order' | translate}} {{order._id}}</span>
+      <span class="order-list__order-status">{{'components.orderPage.' + order.status | translate }}</span>
+      <button
+        [hidden]="(order.status === 'canceled' || order.status === 'received')"
+        [disabled]="order.status === 'delivered'"
+        class="btn" (click)="cancelOrder(order._id)"
+      >{{'components.orderPage.cancelBtn' | translate}}</button>
+      <div>
+        <ul>
+          <li *ngFor="let item of getUserOrdersWithProducts(order.products); let i = index;">
+            <span>{{i + 1}}.&nbsp;</span>
+            <span>{{item.title}}</span>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,14 @@
+FROM node:16-alpine
+
+RUN apk add --no-cache bash
+
+WORKDIR /src-be
+RUN yarn global add typeorm typescript ts-node
+COPY ./src-be/package.json ./
+COPY ./src-be/yarn.lock ./
+RUN yarn
+COPY ./src-be ./
+RUN yarn
+RUN yarn add helmet cors
+EXPOSE ${PORT}
+CMD yarn start:prod

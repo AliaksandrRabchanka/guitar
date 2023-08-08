@@ -1,0 +1,8 @@
+<ul class="purchase-list">
+  <li *ngFor="let item of selectedProducts; let i = index;">
+    <span>{{i + 1}}.&nbsp;</span>
+    <span>{{item.title}}</span>
+    <span>{{item.price | currency}}</span>
+    <button class="btn" (click)="deleteProduct(item._id)">{{'components.basket.deleteBtn' | translate}}</button>
+  </li>
+</ul>

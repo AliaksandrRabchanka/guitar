@@ -1,0 +1,21 @@
+<header class="header-wrapper">
+  <div class="header__left-part">
+    <div class="header-logo" [routerLink]='homeUrl' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{'header-logo__active': router.url === '/' || router.url === '/home'}">
+      <span>{{'components.header.logo' | translate}}</span>
+    </div>
+    <nav class="header-nav">
+      <guitar-navigation></guitar-navigation>
+    </nav>
+  </div>
+  <div class="header__right-part">
+    <div class="header-lang">
+      <button [ngClass]="{'header-lang__active': checkLang('en')}" (click)="changeLang('en')">en</button>
+      <span>/</span>
+      <button [ngClass]="{'header-lang__active': checkLang('ru')}" (click)="changeLang('ru')">ru</button>
+    </div>
+    <div class="header-user">
+      <span>{{user?.login}}</span>
+      <button [routerLink]="[ !user ? 'login' : '/']" (click)="logout()" class="btn header-user_btn">{{(!user ? 'components.header.login' : 'components.header.logout') | translate}}</button>
+    </div>
+  </div>
+</header>

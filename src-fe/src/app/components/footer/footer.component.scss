@@ -1,0 +1,16 @@
+@import 'main';
+.footer {
+  &-wrapper {
+    display: flex;
+    height: 60px;
+    color: $color_white;
+    background: $color_gray_dark;
+    align-items: center;
+    justify-content: flex-end;
+    user-select: none;
+    padding-right: 14px;
+  }
+  &__build-version {
+    margin-right: 10px;
+  }
+}

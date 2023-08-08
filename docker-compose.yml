@@ -1,0 +1,77 @@
+version: '3.4'
+
+volumes:
+  be_guitar_node_modules:
+  fe_guitar_static:
+  fe_guitar_error_pages:
+  mongo_guitar:
+
+services:
+  be-guitar:
+    container_name: be-guitar
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile_be
+    volumes:
+      - ./src-be:/src-be
+      - be_guitar_node_modules:/src-be/node_modules
+    ports:
+      - "8080:8080"
+    env_file: .env
+    environment:
+      - MONGO_URI=mongodb://mongo-guitar:27018/guitarDB
+    links:
+      - mongo-guitar
+    depends_on:
+      - mongo-guitar
+
+  fe-guitar:
+    container_name: fe-guitar
+    restart: "no"
+    build:
+      context: .
+      dockerfile: Dockerfile_fe
+    volumes:
+      - fe_guitar_static:/build_app/dist
+      - fe_guitar_error_pages:/build_app/src/errorPages
+
+  nginx-guitar:
+    container_name: nginx-guitar
+    image: nginx:latest
+    restart: always
+    env_file: ./.env
+    volumes:
+      - fe_guitar_error_pages:/usr/share/nginx/html/errors
+      - fe_guitar_static:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - fe-guitar
+      - be-guitar
+    ports:
+      - "80:80"
+    depends_on:
+      - fe-guitar
+      - be-guitar
+
+  mongo-guitar:
+    container_name: mongo-guitar
+    restart: always
+    image: mongo:4.4.4
+    env_file:  ./.env
+    volumes:
+      - mongo_guitar:/data/db
+    expose:
+#      - "27018"
+      - "27017"
+
+#  mongo-seed-guitar:
+#    container_name: mongo-seed-guitar
+#    build: ./mongo-seed-guitar
+#    env_file: ./.env
+#    environment:
+#      - MONGO_HOST=mongo-guitar
+#    links:
+#      - mongo-guitar
+#    depends_on:
+#      - mongo-guitar

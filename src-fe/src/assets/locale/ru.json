@@ -1,0 +1,112 @@
+{
+  "components": {
+    "login": {
+      "title": "Форма входа",
+      "login": "Логин",
+      "loginError": "логин должен быть больше 2 символов",
+      "password": "Пароль",
+      "passwordError": "пароль должен быть больше 5 символов",
+      "loginBtn": "Войти"
+    },
+    "register": {
+      "title": "Форма регистрации",
+      "login": "Логин",
+      "loginError": "логин должен быть больше 2 символов",
+      "email": "Email",
+      "emailError": "email не является допустимым",
+      "password": "Пароль",
+      "passwordError": "пароль должен быть больше 5 символов",
+      "admin": "Администратор",
+      "registerBtn": "Зарегистрироваться"
+    },
+    "header": {
+      "logo": "гитарный магазин",
+      "navigation": {
+        "showcase": "витрина",
+        "basket": "корзина",
+        "order": "заказы",
+        "admin": "администрирование",
+        "chat": "чат"
+      },
+      "login": "Вход",
+      "logout": "Выход"
+    },
+    "footer": {
+      "buildVersion": "версия сборки: "
+    },
+    "card": {
+      "editBtn": "изменить",
+      "deleteBtn": "удалить",
+      "buyBtn":"купить"
+    },
+    "cardCreate": {
+      "editTitle": "Редактировать товар",
+      "createTitle": "Создать товар",
+      "productTitle": "заголовок ",
+      "productTitleError": "заголовок должен быть больше 3 символов",
+      "productImage": "изображение ",
+      "productImageBtn": "выберите файл",
+      "deleteProductImageBtn": "удалить изображение",
+      "productDescription": "описание ",
+      "productPrice": "цена ",
+      "productPriceError": "цена должна быть числом или числом с точкой",
+      "cancelBtn": "отменить",
+      "saveBtn":"сохранить"
+    },
+    "basket": {
+      "deleteBtn": "удалить"
+    },
+    "homePage": {
+      "beforeAuthorization": "На нашем сайте Вы можете выбрать Вашу гитару после ",
+      "authorization": "авторизации",
+      "dear": "Дорог(ой/ая) ",
+      "greetings": "Мы рады видеть Вас на нашем сайте. Пожалуйста, перейдите на страницу витрины и посмотрите наши гитары."
+    },
+    "loginPage": {
+      "title": "Здесь вы можете ",
+      "loginRegisterBtn": "Войти/Зарегистрироваться",
+      "userLogin": "Вы вошли как "
+    },
+    "showcasePage": {
+      "sortBtn": "сортировать",
+      "createBtn": "создать",
+      "filterString": "фильтровать по имени"
+    },
+    "basketPage": {
+      "title": "Вы выбрали товары в корзину: ",
+      "orderBtn": "заказать",
+      "modalTitle": "оформить заказ"
+    },
+    "orderPage": {
+      "title": "Ваш заказ",
+      "order": "Заказ №",
+      "created": "создан",
+      "canceled": "отменен",
+      "delivered": "доставлен",
+      "received": "получен",
+      "cancelBtn": "отменить",
+      "backBtn": "назад",
+      "resetBtn": "сбросить",
+      "submitBtn": "отправить"
+    },
+    "adminPage": {
+      "user": "пользователь: ",
+      "email": "email: ",
+      "order": "Заказ №",
+      "created": "создан",
+      "canceled": "отменен",
+      "delivered": "доставлен",
+      "received": "получен",
+      "deliveredBtn": "доставлено",
+      "receivedBtn": "получено",
+      "cancelBtn": "отменить",
+      "product": "товар: ",
+      "price": "цена: "
+    },
+    "chatPage": {
+      "title": "Чат",
+      "sendMessage": "Отправить сообщение",
+      "counter": " сообщений в чате"
+    }
+  }
+}

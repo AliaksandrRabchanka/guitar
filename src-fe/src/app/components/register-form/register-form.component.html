@@ -1,0 +1,38 @@
+<div class="register-form">
+  <h2>{{'components.register.title' | translate}}</h2>
+  <form [formGroup]="registerForm" novalidate (ngSubmit)="submit()">
+    <div class="form-group register-form_field">
+      <label for="login">{{'components.register.login' | translate}}</label>
+      <input id="login" class="form-control" name="login" formControlName="login"/>
+
+      <div class="alert alert-danger"
+           *ngIf="registerForm.controls['login'].invalid && registerForm.controls['login'].touched">
+        {{'components.register.loginError' | translate}}
+      </div>
+    </div>
+    <div class="form-group register-form_field">
+      <label for="email">{{'components.register.email' | translate}}</label>
+      <input id="email" class="form-control" name="email" formControlName="email"/>
+
+      <div class="alert alert-danger"
+           *ngIf="registerForm.controls['email'].invalid && registerForm.controls['email'].touched">
+        {{'components.register.emailError' | translate}}
+      </div>
+    </div>
+    <div class="form-group register-form_field">
+      <label for="password">{{'components.register.password' | translate}}</label>
+      <input id="password" class="form-control" name="password" formControlName="password"/>
+      <div class="alert alert-danger"
+           *ngIf="registerForm.controls['password'].invalid && registerForm.controls['password'].touched">
+        {{'components.register.passwordError' | translate}}
+      </div>
+    </div>
+    <div class="form-group register-form_admin-field">
+      <input id="admin" class="form-control" type="checkbox" name="admin" [checked]="admin" (change)="isAdmin()"/>
+      <label for="admin">{{'components.register.admin' | translate}}</label>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-default" [disabled]="registerForm.invalid">{{'components.register.registerBtn' | translate}}</button>
+    </div>
+  </form>
+</div>

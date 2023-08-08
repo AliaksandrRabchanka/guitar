@@ -1,0 +1,33 @@
+@import './variables/main.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: $main_font-family;
+  font-size: 14px;
+  color: $color_black;
+  user-select: none;
+}
+
+.btn {
+  padding: 3px;
+  &:hover {
+    cursor: pointer;
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-left: 10px;
+}

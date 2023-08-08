@@ -1,0 +1,8 @@
+<div>
+  <span>{{ errorMessage }}</span>
+  <span>{{ errorMessageComment }}</span>
+</div>
+
+<div *ngIf="errorCode === 403 || errorCode === 404">
+  <a [routerLink]="homePageLink">Go to homepage</a>
+</div>

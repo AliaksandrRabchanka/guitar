@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>{{'components.chatPage.title' | translate}}</h1>
+  <div class="row">
+    <form [formGroup]="form" autocomplete="off" novalidate (submit)="sendText()">
+      <div class="form-group">
+        <div class="form-control">
+          <textarea placeholder="text message" autocomplete="off" formControlName="text"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <button type="submit" [disabled]="form.invalid">{{'components.chatPage.sendMessage' | translate}}</button>
+      </div>
+    </form>
+    <div class="texts" *ngIf="messages">
+      <div class="counter">
+        <strong>{{messages.length}}{{'components.chatPage.counter' | translate}}</strong>
+      </div>
+      <ul appScroll>
+        <li *ngFor="let message of messages; let i = index;">
+          <strong>{{ message.name }}:</strong> {{ message.message }}
+          <span class="remove" (click)="removeText(i)">x</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+@import 'main';
+
+.wrapper {
+  position: relative;
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

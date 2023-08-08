@@ -1,0 +1,49 @@
+.guitar-error-page {
+  padding: 5rem 1rem;
+}
+
+.guitar-error-page__content-wrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.guitar-error-page__error-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 12px;
+    margin-top: 36px;
+  }
+
+.guitar-error-page__error-description {
+    font-family: 'Sans Bold', Arial, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #303240;
+  }
+
+.guitar-error-page__error-comment {
+    font-family: 'Sans Regular', 'Sans Bold', Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #6C6F80;
+  }
+
+.guitar-error-page__home-link-wrap {
+    margin-top: 24px;
+    font-size: 1.1rem;
+  }
+
+.guitar-error-page__error-image {
+    height: 60vh;
+    max-width: 100%;
+  }

@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let link of links" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+    <a routerLink="{{link}}" class="link">{{'components.header.navigation.' + link | translate}}</a>
+  </li>
+</ul>

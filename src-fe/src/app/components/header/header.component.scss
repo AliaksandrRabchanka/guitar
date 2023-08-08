@@ -1,0 +1,89 @@
+@import 'main';
+.header {
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    background: $color_gray_dark;
+  }
+  &__left-part {
+    display: flex;
+  }
+  &-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 120px;
+    background: $color_green_medium;
+
+    span {
+      text-align: center;
+      &:first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: $color_green_dark;
+    }
+    &__active {
+      background: $color_red;
+      &:hover {
+        background: $color_red_dark;
+      }
+    }
+  }
+  &-nav {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__right-part {
+    display: flex;
+  }
+  &-lang {
+    margin-right: 10px;
+    color: $color_white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      background: transparent;
+      border: none;
+      color: $color_green_medium;
+      font-size: 20px;
+      &:hover {
+        cursor: pointer;
+        color: $color_green_dark;
+      }
+    }
+
+    .header-lang__active {
+      color: $color_red;
+      &:hover {
+        color: $color_red_dark;
+      }
+    }
+
+    span {
+      color: $color_green_medium;
+    }
+  }
+  &-user {
+    margin-right: 10px;
+    color: $color_white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_btn {
+      width: 55px;
+      margin-left: 5px;
+    }
+  }
+}

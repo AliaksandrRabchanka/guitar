@@ -1,0 +1,28 @@
+@import 'main';
+
+.modal-wrapper {
+  background: $color_black;
+  opacity: .5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal-content {
+  width: 500px;
+  min-height: 10px;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  border-radius: 3px;
+  background: $color_white;
+  transform: translateX(-50%);
+  padding: 10px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}

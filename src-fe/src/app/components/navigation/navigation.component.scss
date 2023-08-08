@@ -1,0 +1,24 @@
+@import 'main';
+ul {
+  display: flex;
+}
+li:first-letter {
+  text-transform: uppercase;
+}
+.link {
+  color: $color_green_medium;
+  text-decoration: none;
+  margin-right: 10px;
+
+  &:hover {
+    color: $color_green_dark;
+  }
+}
+
+.active a {
+  color: $color_red;
+  &:hover {
+    color: $color_red_dark;
+  }
+}
+

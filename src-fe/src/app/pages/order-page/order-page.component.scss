@@ -1,0 +1,12 @@
+@import 'main';
+
+.order-list {
+  &__order-status {
+    margin: 0 5px;
+    font-style: italic;
+  }
+
+  .done {
+    color: $color_gray_medium-1;
+  }
+}
